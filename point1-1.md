@@ -20,19 +20,20 @@
 
   即出现：
   
+
 C:\Users\USER>python
   Python 3.8.8 (default, Apr 13 2021, 15:08:03) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
-  
-  Type "help", "copyright", "credits" or "license" for more information.
-  
 
-  
+  Type "help", "copyright", "credits" or "license" for more information.
+
+
+
 在输入想要运行的代码，如：
-  
+
   - 》print("hi")
     》hi
     》4+8
-  》12
+    》12
 
 
 
@@ -82,3 +83,31 @@ C:\Users\USER>python
 
 - 环境的效果是一样的，在原生python环境下一样可以做项目，虚拟环境也可以做项目，只是如果项目都是在原生python环境跑的话，不同的项目所用的包及某些要下载的工具是不一样的，这样项目越多，无用的包和工具会不断积累，开发环境越庞大，电脑越吃力；但如果用虚拟环境的话，你可以仅为某个项目去创建一个虚拟环境，在该环境下载所用到的包和工具等，该环境是与python原生环境相互独立的，当这个项目完成时，退出该虚拟环境，再删掉该虚拟环境即可；这样不会影响原生Python环境，也就不会出现上述问题了，还可以让你能更方便运用对应项目所用的包软件包管理器。
 
+### 虚拟环境的创建使用
+
+- 当你有项目想创建新的环境，使用anaconda创建python环境的方法：1、打开终端；2、执行【conda】命令进入conda环境；3、执行【conda create --name environment_name pytohn==3.6】命令创建环境即可。
+
+###### 具体步骤
+
+1. conda -V      检查当前conda版本。
+2. conda list     查看conda有哪些包。
+3. conda update conda      检查更新conda
+4. conda create -n yourEnv_name python=3.7       yourEnv_name即为你的环境名。称，python版本3.7，这两个是自己设置的。
+5. （当弹出 ：）Proceed ([y]/n)?         输入y回车即可。
+6.  conda env list     查看conda的环境（若有yourEnvname创建成功）所创建环境在anaconda中的envs文件夹中。
+7. conda activate yourEnv_name    激活环境yourEnv_name  成功后命令行前带有(yourEnv_name)
+8. (conda deactivate   退出当前虚拟环境) 在pycharm中配置新环境，打开pycharm，点击fil --> settings --> project Interpreter 
+9. 进入到解释器页面，看到project Interpreter：的一行，点击 x 下方的 '设置' 符号。
+10. 点击add，点击Exiting environment前的圈圈。
+11. 在Interpreter：行栏填入你刚才创建的yourEnv_name环境中的python.exe的绝对路经。
+12. 点击OK，即可。
+13. 不要时，执行命令 conda remove -n yourEnv_name --all   删除。
+
+### 配置虚拟环境
+
+1. 在网上跟教程下载自己电脑nvidia对应的cuda版本。(在cmd窗口输入 nvidia-smi 即可查询自己电脑的nvidia版本)
+2. 下载完cuda，就下载相应的cudnn，注意cuda和cudnn不是一一对应的。
+3. cuda，cudnn下载好后，到官网选择cuda对应的pytorch（可在网上查对应关系）。
+4. pytorch的下载命令后跟的是下载用的网，如果想用清华源或其他国内原，要修改。
+5. 用官网下载，大概一个半小时
+6. 下载完后在刚刚用于下载的虚拟环境中执行   import torch    torch.cuda.is_available()   返回True（表明是GPU版本的torch）即成功！
