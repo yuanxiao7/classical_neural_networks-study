@@ -95,7 +95,7 @@ print(a1.dim())
 
 
 
-#5. ////// 从numpy导入data
+#5. //////  从numpy导入data
 a=np.array([2,3.3])
 a1=torch.from_numpy(a)
 print(a1)
@@ -112,7 +112,7 @@ print(torch.from_numpy(a11))
 
 
 
-#6. ////// tensor与Tensor
+#6. //////  tensor与Tensor
 a=torch.empty(1)   #未初始化，未赋值，系统给的，数据很奇怪（不推荐使用）
 print(a)
 a1=torch.Tensor(2,3)
@@ -304,7 +304,7 @@ print(a1,b1)
 # tensor([[0.3394, 0.3753, 0.9453],
 #         [0.9019, 0.3327, 0.0483]]) tensor([[0.7342, 0.9782],
 #         [0.3178, 0.0572]])
-#
+
 #result2:
 # tensor([[0.5539, 0.5646, 0.7869],
 #         [0.6055, 0.0690, 0.1562]])
@@ -1039,7 +1039,59 @@ print(torch.gather(label.expand(4,10),dim=1,index=b.long()))
 #         [102, 101, 101],
 #         [101, 100, 100],
 #         [101, 100, 100]])
+
+
+
+#44. //////  norm范数2再理解
+a=torch.tensor([[[[1.,2],[1,1]],[[1,2],[2,1]]]]) #直接创建一个tensor
+print(a)
+print(a.shape)
+print(a.norm(2,dim=0))  # z在指定的dim的element不只有一个时取范数
+print(a.norm(2,dim=1))
+print(a.norm(2,dim=2))
+print(a.norm(2,dim=3))
+
+# result:
+# tensor([[[[1., 2.],
+#           [1., 1.]],
+#          [[1., 2.],
+#           [2., 1.]]]])
+# torch.Size([1, 2, 2, 2])
+# tensor([[[1., 2.],
+#          [1., 1.]],
+#         [[1., 2.],
+#          [2., 1.]]])
+# tensor([[[1.4142, 2.8284],
+#          [2.2361, 1.4142]]])
+# tensor([[[1.4142, 2.2361],
+#          [2.2361, 2.2361]]])
+# tensor([[[2.2361, 1.4142],
+#          [2.2361, 2.2361]]])
+
+a=torch.tensor([[[1.,2],[1,1],[1,2],[2,1]]]) #直接创建一个tensor
+print(a)
+print(a.shape)
+print(a.norm(2,dim=0))
+print(a.norm(2,dim=1))
+print(a.norm(2,dim=2))
+
+# #result:
+# result:  print(a.norm(2,dim=0))
+# tensor([[[1., 2.],
+#          [1., 1.],
+#          [1., 2.],
+#          [2., 1.]]])
+# torch.Size([1, 4, 2])
+# tensor([[1., 2.],
+#         [1., 1.],
+#         [1., 2.],
+#         [2., 1.]])
 #
+# print(a.norm(2,dim=1)):
+# tensor([[2.6458, 3.1623]])
+#
+# print(a.norm(2,dim=2)):
+# tensor([[2.2361, 1.4142, 2.2361, 2.2361]])
 
 ```
 
