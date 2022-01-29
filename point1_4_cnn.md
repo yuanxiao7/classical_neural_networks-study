@@ -13,7 +13,7 @@ from torchvision import transforms
 from LeNet_5 import Lenet5
 
 def main():
-    batchsz = 32  # 每一次并行处理13张图片
+    batchsz = 32  # 每一次并行处理32张图片
 
     # datasets下载 存到当前路径，名为cifar的文件 并由numpy转化为tensor类型
     cifar_train = datasets.CIFAR10('cifar', True, transform=transforms.Compose([
