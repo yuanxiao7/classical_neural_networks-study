@@ -92,7 +92,7 @@ C:\Users\USER>python
 1. conda -V      检查当前conda版本。
 2. conda list     查看conda有哪些包。
 3. conda update conda      检查更新conda
-4. conda create -n yourEnv_name python=3.7       yourEnv_name即为你的环境名。称，python版本3.7，这两个是自己设置的。
+4. conda create -n yourEnv_name python=3.7       yourEnv_name即为你的环境名称，python版本3.7，这两个是自己设置的。
 5. （当弹出 ：）Proceed ([y]/n)?         输入y回车即可。
 6.  conda env list     查看conda的环境（若有yourEnvname创建成功）所创建环境在anaconda中的envs文件夹中。
 7. conda activate yourEnv_name    激活环境yourEnv_name  成功后命令行前带有(yourEnv_name)

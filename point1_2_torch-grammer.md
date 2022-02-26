@@ -1,6 +1,6 @@
 # pytorch语法及相关函数
 
-### Klass notes
+### class notes
 
 ```python
 import torch
