@@ -8,8 +8,8 @@ darknet.py
 
 ```python
 import math
-from collections import OrderedDict  # 存储网络结构
-
+from collections import OrderedDict  # 字典，存储网络结构
+import torch
 import torch.nn as nn
 
 
@@ -38,7 +38,7 @@ class BesicBlock(nn.Module):
 
 
     def forward(self, x):
-        residual = x
+        residual = x  # 用于短路
 
         out = self.conv1(x)
         out = self.bn1(out)
@@ -56,22 +56,22 @@ class DarkNet(nn.Module):
         super(DarkNet, self).__init__()
         self.inplanes = 32
 
-        # [416, 416, 3] -> [416, 416, 32]
+        # [b, 3, 416, 416] -> [b, 32, 416, 416]
         self.conv1 = nn.Conv2d(3, self.inplanes, kernel_size=3,
                                stride=1, padding=1, bias=False)
         self.bn1 = nn.BatchNorm2d(self.inplanes)
         self.relu1 = nn.LeakyReLU(0.1)
 
 
-        # [416, 416, 32]->[208, 208, 64]
+        # [b, 32, 416, 416]->[b, 64, 208, 208]
         self.layer1 = self._make_layer([32, 64], layers[0])
-        # [208, 208, 64]->[104, 104, 128]
+        # [b, 64, 208, 208]->[b, 128, 104, 104]
         self.layer2 = self._make_layer([64, 128], layers[1])
-        # [104, 104, 128]->[52, 52, 256]
+        # [b, 128, 104, 104]->[b, 256, 52, 52]
         self.layer3 = self._make_layer([128, 256], layers[2])
-        # [52, 52, 256]->[26, 26, 512]
+        # [b, 256, 52, 52]->[b, 512, 26, 26]
         self.layer4 = self._make_layer([256, 512], layers[3])
-        # [26, 26, 512]->[13, 13, 1024]
+        # [b, 26, 512, 26]->[b, 1024, 13, 13]
         self.layer5 = self._make_layer([512, 1024], layers[4])
 
         self.layer_out_filters = [64, 128, 256, 1024]
@@ -109,21 +109,21 @@ class DarkNet(nn.Module):
 
         # 加入残差结构
         self.inplanes = planes[1]
-        for i in range(0, blocks):
+        for i in range(0, blocks):  # 特征图不变的clock学习
             layers.append(("residual_{}".format(i),
                            BesicBlock(self.inplanes, planes)))
             return nn.Sequential(OrderedDict(layers))
 
-    def forward(self, x):
+    def forward(self, x):  # x: [2, 3, 416, 416]
         x = self.conv1(x)
         x = self.bn1(x)
         x = self.relu1(x)
 
-        x = self.layer1(x)
-        x = self.layer2(x)
-        out3 = self.layer3(x)
-        out4 = self.layer4(out3)
-        out5 = self.layer5(out4)
+        x = self.layer1(x)  # [2, 64, 208, 208]
+        x = self.layer2(x)  # [2, 128, 104, 104]
+        out3 = self.layer3(x)  # [2, 256, 52, 52]
+        out4 = self.layer4(out3)  # [2, 512, 26, 26]
+        out5 = self.layer5(out4)  # [2, 1024, 13, 13]
 
         return out3, out4, out5
 
@@ -136,5 +136,10 @@ def darknet53():
 
 if __name__ == '__main__':
     model = darknet53()
+    a = torch.randn(2, 3, 416, 416)
+    model(a)
+    # print('a: ', a)
     # print(model)
+
+
 ```
