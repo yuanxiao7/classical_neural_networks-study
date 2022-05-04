@@ -2,11 +2,11 @@
 
 天气 小雨转阴
 
-## 问题
+# 问题
 
 win10重装系统后再从本地的git连接GitHub遇到的网络超时与ssh.config相关bug
 
-### git下载
+## git下载
 
 - 借鉴出处：
 
@@ -130,3 +130,62 @@ next
 fatal: Could not read from remote repository. 的端口问题上，吐了，555~
 
 ![image-20220503155850723](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220503155850723.png)
+
+
+
+解决问题，借鉴出处
+
+https://blog.csdn.net/nightwishh/article/details/99647545
+
+就是说，出现下面这个问题是因为，C盘我的用户名之下的.ssh文件没有config文件，端口出现问题，只需要设置好配置文件的端口就好。
+
+
+
+一、首先，不管是git push 还是git clone，报错信息都是：ssh: connect to host github.com port 22: Connection timed out
+
+找到原因：原本是port443: 的但是他一直连的是port2: 
+
+![image-20220504154734780](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220504154734780.png)
+
+
+
+二、先检查一下ssh是否可以连接成功，即右击鼠标，点git bash进入git命令行，输入以下命令
+
+ssh -T git@github.com
+
+如果还是出现这个报错的话，可以使用这个方法来解决你的问题。
+
+
+
+三、接下来，根据点击桌面的电脑来到 电脑--》C盘--》用户--》你的用户名  的目录之下找到 .ssh文件夹看看有没有箭头指向的config文件，（如果你没有ssh文件的话可以根据网上的教程配置，如果有的话，请往下看）
+
+![image-20220504192113929](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220504192113929.png)
+
+如果没有config的话，直接添加config，注意是由txt文件重命名的，没有后缀。添加完以后，应该如图示页面，即上图所示。
+
+
+
+四、以记事本的方式打开，添加如下信息
+
+Host github.com 
+
+User 注册github的邮箱 
+
+Hostname ssh.github.com 
+
+PreferredAuthentications publickey 
+
+IdentityFile ~/.ssh/id_rsa   # 注意这里 ~ 是Linux终端打开的命令行，Windows改为你.ssh的路径
+
+Port 443
+
+再windows直接在config里添加，如图所示
+
+![image-20220504225122848](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220504225122848.png)
+
+
+
+五、在命令符这里git push就可以了
+
+![image-20220504225701023](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220504225701023.png)
+
