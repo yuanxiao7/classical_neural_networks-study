@@ -189,3 +189,18 @@ Port 443
 
 ![image-20220504225701023](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220504225701023.png)
 
+然后你可能会发现 
+
+git clone https://github.com/bubbliiiing/yolo3-pytorch可能会有问题，无法下载，改用ssh的来下载。
+
+![image-20220505165522244](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220505165522244.png)
+
+
+
+将路径复制过去以后，直接回车下载。
+
+![image-20220505164530815](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220505164530815.png)
+
+成功下载
+
+![image-20220505165636910](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220505165636910.png)

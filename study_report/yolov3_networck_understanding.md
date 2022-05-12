@@ -106,6 +106,12 @@ X2 = out3 + X0_out1  (7次卷积)    X0_out2 = out1  (5次卷积)
   3. loss_cls = (具体的物体概率 - 真实) 的和
 - loss = loss_cfg + loss_框 + loss_cls
 
+
+
+### coco数据集处理
+
+可供详细参考：https://blog.csdn.net/cp1314971/article/details/104993542
+
 五、training
 
 六、test
