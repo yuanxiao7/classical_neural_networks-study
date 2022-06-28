@@ -1,4 +1,6 @@
 ## 网课笔记整理
+![image](https://user-images.githubusercontent.com/93062146/176079796-82886a5d-ee9d-495e-b10d-5f525f1986cc.png)
+
 
 ### [torch](https://so.csdn.net/so/search?q=torch&spm=1001.2101.3001.7020).normal()
 
