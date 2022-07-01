@@ -1,3 +1,2 @@
 # study-summary
-You can see my study reports here.
-Here,python_code folder,you can see my understanding of several classic network models.Hopefully,my notes and code comments will give you some useful inspiration.
+在这里，python_code的文件夹，你可以看到我对几个经典的网络模型的理解。也希望我的笔记和代码注释能够让你有一些有用的启发。
