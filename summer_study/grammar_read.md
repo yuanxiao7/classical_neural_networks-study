@@ -272,7 +272,7 @@ tensor([[[2.2361, 1.4142],
 
 ![image-20220627202639797](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220627202639797.png)
 
-![image](https://github.com/yuanxiao7/summer_project/blob/master/picture/1-1.png)
+
 
 
 
