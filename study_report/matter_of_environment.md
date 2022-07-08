@@ -30,7 +30,8 @@
 
 - #### 判断cudnn安装成功，两个测试exe程序 
 
-- ![image-20220416231346423](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416231346423.png
+- ![image](https://user-images.githubusercontent.com/93062146/178001783-2cd644f8-1620-46c3-8397-1b13a0d85aec.png)
+
 
 - <img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416231426505.png" alt="image-20220416231426505" style="zoom:67%;" />
 
