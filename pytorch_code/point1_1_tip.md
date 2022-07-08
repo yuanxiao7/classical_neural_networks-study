@@ -18,11 +18,12 @@
   
      在计算机左下角搜索栏里输入cmd，弹出如下界面，
   
-     <img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220708133658138.png" alt="image-20220708133658138" style="zoom: 50%;" />
+    ![image](https://user-images.githubusercontent.com/93062146/177955188-a2220adb-ad2c-415b-995c-0db4f1257252.png)
+
   
      然后鼠标单击“以管理员身份运行”，来到如下界面，即可下载
   
-     <img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220708133740568.png" alt="image-20220708133740568" style="zoom: 80%;" />
+    ![image](https://user-images.githubusercontent.com/93062146/177955569-5454df83-921b-49ee-8fa6-da3d493be5c8.png)
   
   
 
