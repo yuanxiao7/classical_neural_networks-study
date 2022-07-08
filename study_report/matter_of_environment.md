@@ -6,11 +6,7 @@
 
 ## 二、conda环境变量，library里没有usr文件夹的处理
 
-- ![image-20220416225847106](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416225847106.png)
-
-
-
-
+- ![image](https://user-images.githubusercontent.com/93062146/178001079-bdc28b05-db74-40e2-bfed-feeb7272b998.png)
 
 
 
