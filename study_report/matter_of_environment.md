@@ -68,6 +68,7 @@ CUDA-10.2 PyTorch builds are no longer available for Windows, please use CUDA-11
 
 
 - 项目的环境需按照requirements配置
-- ![image-20220416232539645](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416232539645.png)
+- ![image](https://user-images.githubusercontent.com/93062146/178002716-76bc626c-2975-4b08-8fbf-da9a392a18d8.png)
+
 
 代码是通用的，只要有相应的包，基本上都可以跑起来。 
