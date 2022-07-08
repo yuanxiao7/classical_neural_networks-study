@@ -60,7 +60,8 @@ CUDA-10.2 PyTorch builds are no longer available for Windows, please use CUDA-11
 
 - 确定蓝色文件夹的位置如下方蓝色文件夹的位置
 
-- ![image-20220416232227346](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416232227346.png)
+- ![image](https://user-images.githubusercontent.com/93062146/178002476-eab8f2d8-3377-48b7-ac3c-e1db22aefa6b.png)
+
 
 - 这样才不会影响代码运行
 
