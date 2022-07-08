@@ -53,7 +53,8 @@ CUDA-10.2 PyTorch builds are no longer available for Windows, please use CUDA-11
 
 
 - 项目yolo子文件
-- ![image-20220416232149957](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416232149957.png)
+- ![image](https://user-images.githubusercontent.com/93062146/178002314-b0666e4d-935d-451c-a565-3ce902cadda8.png)
+
 
 
 
