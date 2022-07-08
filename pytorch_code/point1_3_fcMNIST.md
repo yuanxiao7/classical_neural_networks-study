@@ -1,8 +1,19 @@
-## class notes
+# class notes
 
 - The first of using pytorch
 
-mnist_train.py
+### 项目说明：
+
+- 这个md文件里的是一个利用pytorch写的一个小小的全连接网络（Fc）来实现手写数字识别，并用matplotlib来实现原图片及预测图片，loss的可视化展示。你只要复制过去，放到你的编辑器里跑就行了，如果没有下载第三方库的话，你可以按照提示，到cmd里面用conda或者pip下载，友情提示，pip下载时，请关掉你的代理，否则极有可能会出现报错。
+
+
+
+### 项目文件
+
+#### mnist_train.py
+
+- 这是主函数，数据传入，激活函数，网络处理，优化器，loss 等相关内容。
+- 在这个小项目中，up主的准确率为0.8923，我改了batch_size 准确率为0.9778 意外提升0.1左右，但是batch_size大的话，所得的loss比较稳定 batch_size小则loss浮动大，loss本身的大小不重要，他所呈现的趋势才能体现网络的效果。
 
 ```python
 import torch
@@ -136,14 +147,13 @@ plot_image(x, pred, 'test')
 
 
 
-# up主的准确率为0.8923
-# 我改了batch size 准确率为0.9778 意外提升0.1左右
-# size大loss比较稳定 小loss浮动大
 ```
 
 
 
-utils.py
+#### utils.py
+
+- 这部分则是可视化展示的代码，这里推荐博主的 “莫烦” python教程。 
 
 ```python
 import torch
@@ -185,10 +195,12 @@ def one_hot(label, depth=10):  # 编码工具
 
 
 
-mnist CPU and GPU
+## mnist CPU and GPU
+
+- 通常来说，做深度学习，gpu对我们跑算法的速度提升是很有用的，以下就是将模型搬到gpu的代码展示。
 
 ```python
-#模型一:
+# 模型一:
 
 import torch
 from torch import nn  # 网络
@@ -281,10 +293,9 @@ for epoch in range(epochs):
     ))
 
 
+```
 
-
-
-
+```python
 #模型二: #搬到GPU上运行
 
 
@@ -392,4 +403,6 @@ for epoch in range(epochs):
         100. * correct / len(test_loader.dataset)
     ))
 ```
+
+
 
