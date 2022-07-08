@@ -13,8 +13,8 @@
 ## 三、conda激活环境
 
 - ### conda activate + name  激活不了，改用activate + name直接激活
+- ![image](https://user-images.githubusercontent.com/93062146/178001357-42289c4d-1a92-427a-8ae6-6807031e93e1.png)
 
-- <img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416230659592.png" alt="image-20220416230659592" style="zoom: 80%;" />
 
 
 
