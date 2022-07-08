@@ -1,17 +1,7 @@
 # 项目环境配置
 
-## 一、给.condarc添加清华源 
 
-![image-20220416230807629](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416230807629.png)-
-
-- #### 选用清华源比较好
-
-- <img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416230024781.png" alt="image-20220416230024781" style="zoom: 67%;" />- 
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/93062146/178000815-3e00c101-ff3e-4c3e-a923-059c22c0c6b8.png)
 
 
 ## 二、conda环境变量，library里没有usr文件夹的处理
