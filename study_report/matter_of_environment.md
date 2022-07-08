@@ -24,7 +24,7 @@
 
 - #### 用winRAR解压cudnn软件，解压到对应路径文件夹
 
-- ![image-20220416231142595](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416231142595.png)
+-![image](https://user-images.githubusercontent.com/93062146/178001568-fee76a6a-c153-412b-808d-aa7dee26d1e3.png)
 
 
 
