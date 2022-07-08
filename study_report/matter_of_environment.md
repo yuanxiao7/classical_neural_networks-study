@@ -45,7 +45,8 @@ CUDA-10.2 PyTorch builds are no longer available for Windows, please use CUDA-11
 
 ## 五、项目运行init文件
 
--  ![image-20220416231727605](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416231727605.png)
+-  ![image](https://user-images.githubusercontent.com/93062146/178002148-0f30162f-d362-4bb7-9777-51ca2457910d.png)
+
 
 - 出现此报错，检查是否有项目py文件被改动，不符合要求，将改动的文件改回来
 
