@@ -33,9 +33,7 @@
 - ![image](https://user-images.githubusercontent.com/93062146/178001783-2cd644f8-1620-46c3-8397-1b13a0d85aec.png)
 
 
-- <img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416231426505.png" alt="image-20220416231426505" style="zoom:67%;" />
-
-- ![image-20220416231448998](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220416231448998.png)
+-![image](https://user-images.githubusercontent.com/93062146/178001919-05f25f55-5264-4b2a-a409-0cc9004814b0.png)
 
 
 
