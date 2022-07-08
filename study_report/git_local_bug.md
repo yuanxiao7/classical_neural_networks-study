@@ -18,7 +18,7 @@ win10重装系统后再从本地的git连接GitHub遇到的网络超时与ssh.co
 
 官网下载：[https://git-scm.com/downloads](https://git-scm.com/downloads)
 
-![image-20220503145529511](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220503145529511.png)
+<img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220503145529511.png" alt="image-20220503145529511" style="zoom:80%;" />
 
 也可以进入下面这个页面自选版本
 
@@ -116,9 +116,9 @@ next
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/48f67e0230054f2ba6bdf85fc9ea6db4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAbXVrZXM=,size_20,color_FFFFFF,t_70,g_se,x_16)
 
-见到一张合适的图，拿来用用（默认你已经有git的账户，可以git clone别人的仓库了）
+**见到一张合适的图，拿来用用**（默认你已经有git的账户，可以git clone别人的仓库了）
 
-![image-20220503154101085](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220503154101085.png)
+<img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220503154101085.png" alt="image-20220503154101085" style="zoom:80%;" />
 
 可能不同时期下载会有差异，但基本上是这样。
 
@@ -129,7 +129,7 @@ next
 重装系统之后，我已经装好git并且成功把自己GitHub的仓库git clone下来了，当我更新我的仓库是，即我想要更新我的笔记时，他告诉我，我的ssh有问题，没连接上，然后我就尝试了各种方法，重复新弄了一个ssh，结果bug的背后有一个bug，现在就卡在ssh: connect to host github.com port 22: Connection timed out
 fatal: Could not read from remote repository. 的端口问题上，吐了，555~
 
-![image-20220503155850723](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220503155850723.png)
+<img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220503155850723.png" alt="image-20220503155850723" style="zoom:80%;" />
 
 
 
@@ -203,4 +203,28 @@ git clone https://github.com/bubbliiiing/yolo3-pytorch可能会有问题，无�
 
 成功下载
 
-![image-20220505165636910](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220505165636910.png)
+<img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220505165636910.png" alt="image-20220505165636910" style="zoom:80%;" />
+
+说明git连上GitHub了，耶！
+
+
+
+感想
+
+还是接触的少，遇到一个问题纠结了好久，不过好在弄好了，小开心。
+
+
+
+## 本地修改和GitHub上修改产生的冲突
+
+借鉴出处
+
+https://blog.csdn.net/weixin_43922901/article/details/89426923
+
+报错如下
+
+![image-20220708205440527](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220708205440527.png)-
+
+![image-20220708205603962](C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220708205603962.png)-
+
+按照此输入即可解决，散花撒花！
