@@ -23,7 +23,7 @@
   
      然后鼠标单击“以管理员身份运行”，来到如下界面，即可下载
   
-     <img src="C:\Users\Happy\AppData\Roaming\Typora\typora-user-images\image-20220708133740568.png" alt="image-20220708133740568" style="zoom: 80%;" />
+    ![image](https://user-images.githubusercontent.com/93062146/177955569-5454df83-921b-49ee-8fa6-da3d493be5c8.png)
   
   
 
