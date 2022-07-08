@@ -71,7 +71,7 @@ class Net(nn.Module):
         x = F.relu(self.fc1(x))
         # h2 = relu(h1w2+b1)
         x = F.relu(self.fc2(x))
-        # h1 = h2w3+b3 这里按需求加不加激活函数，我们这里不加，采用均方差
+        # h3 = h2w3+b3 这里按需求加不加激活函数，我们这里不加，采用均方差
         x = self.fc3(x)
 
         return x
